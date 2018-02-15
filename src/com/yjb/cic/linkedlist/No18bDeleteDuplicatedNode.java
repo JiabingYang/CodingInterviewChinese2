@@ -20,11 +20,11 @@ public class No18bDeleteDuplicatedNode {
                 pre = pre.next;
                 continue;
             }
-            ListNode p1 = p.next;
-            while (p1 != null && p1.value == p.value) {
-                p1 = p1.next;
-            }
-            pre.next = p1;
+            int val = p.value;
+            do {
+                p = p.next;
+            } while (p != null && p.value == val);
+            pre.next = p;
         }
         return dummy.next;
     }

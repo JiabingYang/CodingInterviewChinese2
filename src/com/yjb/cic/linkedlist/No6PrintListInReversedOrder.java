@@ -42,13 +42,13 @@ public class No6PrintListInReversedOrder {
         if (head == null) {
             return;
         }
-        LinkedList<Integer> elements = new LinkedList<>();
+        LinkedList<Integer> stack = new LinkedList<>();
         while (head != null) {
-            elements.push(head.element);
+            stack.push(head.element);
             head = head.next;
         }
-        while (elements.peek() != null) {
-            System.out.print(elements.pop());
+        while (stack.peek() != null) {
+            System.out.print(stack.pop());
         }
     }
 
