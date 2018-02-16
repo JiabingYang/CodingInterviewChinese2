@@ -19,6 +19,9 @@ public class No9aQueueWithTwoStacks {
         }
     }
 
+    /**
+     * 最直接的写法
+     */
     public static class StackQueueSolution1<T> {
         private Stack<T> stack1 = new Stack<>();
         private Stack<T> stack2 = new Stack<>();
@@ -42,15 +45,18 @@ public class No9aQueueWithTwoStacks {
         }
     }
 
+    /**
+     * 最直接的写法中不把栈1的底部元素导到栈2中再从栈2弹出而是直接弹出（需要使用size）
+     */
     public static class StackQueueSolution2<T> {
         private Stack<T> stack1 = new Stack<>();
         private Stack<T> stack2 = new Stack<>();
 
-        public void appendTail(T t) {
+        void appendTail(T t) {
             stack1.push(t);
         }
 
-        public T deleteHead() {
+        T deleteHead() {
             if (stack1.empty()) {
                 throw new RuntimeException("Queue is empty");
             }
@@ -66,15 +72,43 @@ public class No9aQueueWithTwoStacks {
         }
     }
 
+    /**
+     * 最好的写法（不用size）
+     */
     public static class StackQueueSolution3<T> {
         private Stack<T> stack1 = new Stack<>();
         private Stack<T> stack2 = new Stack<>();
 
-        public void appendTail(T t) {
+        void appendTail(T t) {
             stack1.push(t);
         }
 
-        public T deleteHead() {
+        T deleteHead() {
+            if (!stack2.empty()) {
+                return stack2.pop();
+            }
+            if (stack1.empty()) {
+                throw new RuntimeException("Queue is empty");
+            }
+            while (!stack1.empty()) {
+                stack2.push(stack1.pop());
+            }
+            return stack2.pop();
+        }
+    }
+
+    /**
+     * 最好的写法（用size）
+     */
+    public static class StackQueueSolution4<T> {
+        private Stack<T> stack1 = new Stack<>();
+        private Stack<T> stack2 = new Stack<>();
+
+        void appendTail(T t) {
+            stack1.push(t);
+        }
+
+        T deleteHead() {
             if (!stack2.empty()) {
                 return stack2.pop();
             }
