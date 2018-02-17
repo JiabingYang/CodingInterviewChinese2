@@ -12,42 +12,39 @@ import java.util.List;
  */
 public class No38aStringPermutation {
 
-    public static void main(String[] args) {
-        char[] c1 = {'a', 'b', 'c'};
-        permutation(c1);
-        System.out.println();
+    /* ---------------- solution1 -------------- */
 
-        char[] c2 = {'a', 'b', 'c', 'd'};
-        permutation(c2);
-    }
-
+    /**
+     * 修改自:
+     * https://github.com/Wang-Jun-Chao/coding-interviews/blob/master/src/Test28.java
+     * <p>
+     * 书上的思路
+     */
     private static void permutation(char[] chars) {
-        // 输入较验
-        if (chars == null || chars.length < 1) {
+        if (chars == null || chars.length == 0) {
             return;
         }
-        // 进行排列操作
         permutation(chars, 0);
     }
 
     private static void permutation(char[] chars, int begin) {
-        // 如果是最后一个元素了，就输出排列结果
-        if (chars.length - 1 == begin) {
+        if (begin == chars.length - 1) {
             System.out.print(new String(chars) + " ");
             return;
         }
-        char tmp;
-        // 对当前还未处理的字符串进行处理，每个字符都可以作为当前处理位置的元素
         for (int i = begin; i < chars.length; i++) {
-            // 下面是交换元素的位置
+            char tmp = chars[begin];
+            chars[begin] = chars[i];
+            chars[i] = tmp;
+            permutation(chars, begin + 1);
+            // 下面三行如果不写也没关系（可以不交换回来）
             tmp = chars[begin];
             chars[begin] = chars[i];
             chars[i] = tmp;
-
-            // 处理下一个位置
-            permutation(chars, begin + 1);
         }
     }
+
+    /* ---------------- mySolution -------------- */
 
     /**
      * 和剑指offer的解法不同。效率较低。
@@ -55,6 +52,7 @@ public class No38aStringPermutation {
      * <p>
      * 写的时候没看函数定义，用String写的，用字符数组会有高得多的效率（插入操作的效率还是会很低）
      * 如果用数组写，思路是一样的
+     * 不推荐的写法
      */
     private static void mySolution(String a) {
         for (String s : coreMySolution(a)) {
@@ -81,5 +79,15 @@ public class No38aStringPermutation {
             }
         }
         return result;
+    }
+
+    /* ---------------- test -------------- */
+    public static void main(String[] args) {
+        char[] c1 = {'a', 'b', 'c'};
+        permutation(c1);
+        System.out.println();
+
+        char[] c2 = {'a', 'b', 'c', 'd'};
+        permutation(c2);
     }
 }
