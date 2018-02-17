@@ -64,11 +64,10 @@ public class No38cStringCombination {
     }
 
     private static void dfs2(char[] chars, int start, String current, List<String> result) {
-        if (!"".equals(current)) {
-            result.add(current);
-        }
         for (int i = start; i < chars.length; i++) {
-            dfs2(chars, i + 1, current + chars[i], result);
+            String s = current + chars[i];
+            result.add(s);
+            dfs2(chars, i + 1, s, result);
         }
     }
 
@@ -112,7 +111,7 @@ public class No38cStringCombination {
 
     /* ---------------- test -------------- */
     public static void main(String[] args) {
-        System.out.println(solution3("aab".toCharArray()));
-        System.out.println(solution3("aaabca".toCharArray()));
+        System.out.println(solution2("aab".toCharArray()));
+        System.out.println(solution2("aaabca".toCharArray()));
     }
 }
