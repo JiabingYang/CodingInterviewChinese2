@@ -7,7 +7,7 @@ package com.yjb.cic.string;
  * 中，匹配是指字符串的所有字符匹配整个模式。例如，字符串"aaa"与模式"a.a"
  * 和"ab*ac*a"匹配，但与"aa.a"及"ab*a"均不匹配。
  * <p>
- * LeetCode: 10. Regular Expression Matching
+ * Leetcode: 10. Regular Expression Matching
  */
 public class No19RegularExpressions {
 

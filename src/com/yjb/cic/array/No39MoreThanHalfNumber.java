@@ -6,7 +6,7 @@ package com.yjb.cic.array;
  * 如输入一个长度为9的数组{1, 2, 3, 2, 2, 2, 5, 4, 2}。由于数字2在数组中
  * 出现了5次，超过数组长度的一半，因此输出2。
  * <p>
- * LeetCode: 169. Majority Element
+ * Leetcode: 169. Majority Element
  */
 public class No39MoreThanHalfNumber {
 

@@ -9,7 +9,7 @@ import java.util.TreeSet;
  * 不同于No38aStringPermutation的是:
  * 求字符的所有组合（非空子集）
  * <p>
- * 参考LeetCode:
+ * 参考Leetcode:
  * 77. Combinations
  * 78. Subsets
  */
