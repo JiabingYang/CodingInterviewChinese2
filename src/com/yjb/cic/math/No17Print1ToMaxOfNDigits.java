@@ -56,14 +56,14 @@ public class No17Print1ToMaxOfNDigits {
         print1ToMaxOfNDigits2Core(0, arr);
     }
 
-    private static void print1ToMaxOfNDigits2Core(int n, int[] arr) {
-        if (n == arr.length) {
+    private static void print1ToMaxOfNDigits2Core(int pos, int[] arr) {
+        if (pos == arr.length) {
             printNumber(arr);
             return;
         }
         for (int i = 0; i < 10; i++) {
-            arr[n] = i;
-            print1ToMaxOfNDigits2Core(n + 1, arr);
+            arr[pos] = i;
+            print1ToMaxOfNDigits2Core(pos + 1, arr);
         }
     }
 
