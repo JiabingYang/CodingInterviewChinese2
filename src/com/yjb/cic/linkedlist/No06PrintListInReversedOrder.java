@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * 栈/递归
  * 时间n 空间n
  */
-public class No6PrintListInReversedOrder {
+public class No06PrintListInReversedOrder {
 
     public static void main(String[] args) {
         Node head1 = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5, null)))));

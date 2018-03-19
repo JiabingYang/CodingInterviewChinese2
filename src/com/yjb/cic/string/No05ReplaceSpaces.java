@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 双指针，从后往前复制
  * 时间n 空间1
  */
-public class No5ReplaceSpaces {
+public class No05ReplaceSpaces {
 
     public static void main(String[] args) {
         System.out.println(replaceBlank("hello world".toCharArray()));

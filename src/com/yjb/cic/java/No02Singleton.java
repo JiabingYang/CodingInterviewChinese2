@@ -3,7 +3,7 @@ package com.yjb.cic.java;
 /**
  * 单例
  */
-public class No2Singleton {
+public class No02Singleton {
 
     /**
      * 懒汉

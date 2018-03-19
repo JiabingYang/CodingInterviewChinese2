@@ -13,7 +13,7 @@ package com.yjb.cic.tree;
  * 然后知道中序遍历数组中的左子树和右子树数组，根据左子树数组长度确定前序遍历数组中的左子树数组和右子树数组
  * 递归
  */
-public class No7ConstructBinaryTree {
+public class No07ConstructBinaryTree {
 
     public static void main(String[] args) {
         int[] preOrder = {1, 2, 4, 7, 3, 5, 6, 8};

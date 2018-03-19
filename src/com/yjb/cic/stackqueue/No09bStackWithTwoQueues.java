@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * 两个队列实现一个栈
  */
-public class No9bStackWithTwoQueues {
+public class No09bStackWithTwoQueues {
 
     public static void main(String[] args) {
         MQueueStack<Integer> mQueueStack = new MQueueStack<>();

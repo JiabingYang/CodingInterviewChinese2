@@ -13,7 +13,7 @@ package com.yjb.cic.array;
  * 1. 先排序，然后遍历 时间nlogn 空间1
  * 2. 散列表 时间n 空间n
  */
-public class No3aDuplicationInArray {
+public class No03aDuplicationInArray {
 
     public static void main(String[] args) {
         System.out.println(duplicate(new int[]{2, 1, 3, 1, 4})); // 1

@@ -13,7 +13,7 @@ package com.yjb.cic.array;
  * 其他方法：
  * 1. 遍历，依次复制到新数组中，比较 时间n空间n
  */
-public class No3bDuplicationInArrayNoEdit {
+public class No03bDuplicationInArrayNoEdit {
 
     public static void main(String[] args) {
         System.out.println(duplicate(new int[]{2, 3, 5, 4, 3, 2, 6, 7}));//2,3

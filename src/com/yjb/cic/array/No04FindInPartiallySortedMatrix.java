@@ -11,7 +11,7 @@ import java.util.Arrays;
  * 二分查找（注意二分的中点在哪儿（应该是矩阵右上角而不是矩阵中间点））
  * 时间logn 空间1
  */
-public class No4FindInPartiallySortedMatrix {
+public class No04FindInPartiallySortedMatrix {
 
     public static void main(String[] args) {
         testIteration();

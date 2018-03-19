@@ -10,7 +10,7 @@ package com.yjb.cic.tree;
  * a)是父节点左孩子（eg：N，I，L） ，那么父节点就是下一个节点 ；
  * b)是父节点的右孩子（eg：H，J，K，M）找他的父节点的父节点的父节点…直到当前结点是其父节点的左孩子位置。如果没有，那么他就是尾节点。
  */
-public class No8NextNodeInBinaryTrees {
+public class No08NextNodeInBinaryTrees {
 
     public static void main(String[] args) {
         //            1
