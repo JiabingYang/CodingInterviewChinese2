@@ -29,7 +29,7 @@ public class No52FirstCommonNodesInLists {
         Node pBack;
         int lenDiff;
 
-        //确定head1和heda2哪个比较长，pBack指向短的链表表头
+        //确定head1和head2哪个比较长，pBack指向短的链表表头
         if (len1 < len2) {
             pFront = head2;
             pBack = head1;

@@ -1,4 +1,4 @@
-package com.yjb.cic.recursionloop;
+package com.yjb.cic.dp;
 
 /**
  * 面试题10：斐波那契数列
@@ -18,13 +18,12 @@ public class No10Fibonacci {
         }
         int last = 1;
         int nextToLast = 1;
-        int result = 0;
         for (int i = 2; i <= n; i++) {
-            result = last + nextToLast;
+            int temp = last + nextToLast;
             nextToLast = last;
-            last = result;
+            last = temp;
         }
-        return result;
+        return last;
     }
 
     /**
