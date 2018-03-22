@@ -11,16 +11,24 @@ public class No67StringToInt {
         if (str == null || str.length() == 0) {
             return 0;
         }
+        str = str.trim();
         boolean negative = str.charAt(0) == '-';
-        int start = negative ? 1 : 0;
-        int result = 0;
+        int start = negative ? 1 : (str.charAt(0) == '+' ? 1 : 0);
+        double result = 0;
         for (int i = start; i < str.length(); i++) {
             char c = str.charAt(i);
             if (c < '0' || c > '9') {
-                return 0;
+                break;
             }
             result = result * 10 + (c - '0');
         }
-        return negative ? -result : result;
+        result = negative ? -result : result;
+        if (result > Integer.MAX_VALUE) {
+            return Integer.MAX_VALUE;
+        }
+        if (result < Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        }
+        return (int) result;
     }
 }
